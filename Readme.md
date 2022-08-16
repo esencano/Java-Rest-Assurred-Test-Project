@@ -39,21 +39,24 @@ docker run --rm \
  -e TEST_DB_PASSWORD=$TEST_DB_PASSWORD \
  -v output_path/reports:/app/test-output \
  -v  output_path/logs:/app/logs \
- api-automation-project```	
+ api-automation-project 
+ ```	
 
 
 #### Run with jenkins
 It will be enough to run below command in a jenkins job. In jenkins job TEST_NAME environment variable can be parameterized so it will support more flexibility
 
 ```sh
-./build/docker_jenkins.bash``	
+./build/docker_jenkins.bash 
+```	
 
 
 ### Reports
 Under test-ouput folder, there can be seen different kind of reports.
 Allure should be installed locally to see allure reports on browser. below command should be run after installing allure.
 ```sh
-allure serve test-output/allure-results``	
+allure serve test-output/allure-results 
+```	
 
  - TestNG reports and html file
  - JUnit reports
