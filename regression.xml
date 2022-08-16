@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">  
+<suite name="Regression test" parallel="classes">
+	<test name="regression">
+		<groups>
+			<run>
+				<include name="regression" />
+			</run>
+		</groups>
+		<packages>
+		  <package name="login.api"/> 
+		  <package name="user.api"/>   
+	      <package name="home.api"/>
+	</packages>
+	</test>
+</suite>
+
+<!-- mvn clean test -Dsurefire.suiteXmlFiles=regression.xml -->

@@ -1,0 +1,16 @@
+home/api/TestEditHome.class
+login/api/LoginBaseTest.class
+user/api/TestCreateUser.class
+user/api/TestEditAdmin.class
+user/api/UserBaseTest.class
+user/api/TestGetAdmin.class
+user/api/TestDeleteUser.class
+home/api/TestCreateHome.class
+home/api/HomeBaseTest.class
+user/api/TestCreateAdmin.class
+login/api/LoginTest.class
+user/api/TestEditUser.class
+user/api/CreateUserDataProvider.class
+user/api/TestDeleteAdmin.class
+login/api/LoginDataProvider.class
+user/api/TestGetUser.class

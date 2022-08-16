@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+
+    <Appenders>
+    	<!-- configuration of Console appender -->
+    	<Console name="console" target="SYSTEM_OUT">
+        	<PatternLayout pattern="%d [%t] %-5level %logger{36} - %msg%n%throwable"/>
+    	</Console>    
+
+   		<RollingFile name="RollingFile" fileName="logs/app.log" filePattern="logs/app-%d{MM-dd-yyyy}.log.gz">
+ 			<PatternLayout pattern= "%d %p %C{1.} [%t] %m%n"/>
+ 				<Policies>
+    				<SizeBasedTriggeringPolicy size="10 MB"/>
+  				</Policies>
+		 </RollingFile>
+    </Appenders>
+    
+    <Loggers>
+    	<!-- Here Root logger is referring to console appender -->
+        <Root level="info">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+    </Loggers>
+    
+</Configuration>
+
