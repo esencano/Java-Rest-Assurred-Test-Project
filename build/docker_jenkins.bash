@@ -16,7 +16,7 @@ echo "run container"
 #run docker container
 docker run \
        --name container-esencano-api-automation \
-       -e TEST_NAME=smoke \
+       -e TEST_NAME=$TEST_NAME \
        -e TEST_DB_URL=$TEST_DB_URL \
        -e TEST_DB_USERNAME=$TEST_DB_USERNAME \
        -e TEST_DB_PASSWORD=$TEST_DB_PASSWORD \
