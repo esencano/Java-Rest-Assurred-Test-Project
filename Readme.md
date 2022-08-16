@@ -44,6 +44,7 @@ docker run --rm \
 
 
 #### Run with jenkins
+On Jenkins same enviroment variables should be set or they can be set as credentials.
 It will be enough to run below command in a jenkins job. In jenkins job TEST_NAME environment variable can be parameterized so it will support more flexibility
 
 ```sh
