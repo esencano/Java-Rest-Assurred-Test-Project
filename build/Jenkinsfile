@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters {
+       choice(name: 'TestType', choices: ['smoke', 'regression', 'full_test'], description:  'Choose test type')
+    }
     environment {
         TEST_DB_URL      = credentials('dbURL')
         TEST_DB_USERNAME = credentials('dbUserName')

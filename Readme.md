@@ -54,10 +54,9 @@ It will be enough to run below command  in a jenkins job. In jenkins job TEST_NA
 
 2- With Jenkinsfile
 On Jenkins maven plugin must be installed and configured as m1, also junit, testng report and allure report plugins should be installed
-Then it will be enough to run Jekinsfile on jenkins pipeline but TestType parameter should be given as variable and it should be a suite file name. Ex: smoke, regression etc. 
+Then it will be enough to run Jekinsfile on jenkins pipeline.
 Three types of report have been added to Jenkins just to see different options of reports.
   
-
 ### Reports
 Under test-ouput folder, there can be seen different kind of reports.
 Allure should be installed locally to see allure reports on browser. below command should be run after installing allure.
