@@ -45,13 +45,18 @@ docker run --rm \
 
 
 #### Run with jenkins
-On Jenkins same enviroment variables should be set or they can be set as credentials.
-It will be enough to run below command in a jenkins job. In jenkins job TEST_NAME environment variable can be parameterized so it will support more flexibility
+1- With Shell
+It will be enough to run below command  in a jenkins job. In jenkins job TEST_NAME environment variable can be parameterized so it will support more flexibility.
 
 ```sh
-./build/docker_jenkins.bash 
-```	
+./build/docker_jenkins.bash
+```
 
+2- With Jenkinsfile
+On Jenkins maven plugin must be installed and configured as m1, also junit, testng report and allure report plugins should be installed
+Then it will be enough to run Jekinsfile on jenkins pipeline but TestType parameter should be given as variable and it should be a suite file name. Ex: smoke, regression etc. 
+Three types of report have been added to Jenkins just to see different options of reports.
+  
 
 ### Reports
 Under test-ouput folder, there can be seen different kind of reports.

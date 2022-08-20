@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    environment {
+        TEST_DB_URL      = credentials('dbURL')
+        TEST_DB_USERNAME = credentials('dbUserName')
+        TEST_DB_PASSWORD = credentials('dbPassword')
+    }
+    tools {
+        // Install the Maven version configured as "m1" and add it to the path.
+        maven "m1"
+    }
+
+    stages {
+        stage('Clone and Run Tests') {
+            steps {
+                cleanWs()
+                git url:'https://github.com/esencano/Java-Rest-Assurred-Test-Project.git', branch:'main'
+                sh "mvn clean test -Dsurefire.suiteXmlFiles=${TestType}.xml"
+            }
+        }
+
+    }
+     post {
+        always {
+               allure includeProperties: false, jdk: '', results: [[path: '**/test-output/allure-results']] // allure
+               junit testResults: '**/test-output/junitreports/*.xml' //junit
+               step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml']) //testng
+        }
+    }
+}
