@@ -1,7 +1,7 @@
 #java, #rest-assured, #testng, #maven, #lombok, #allure, #log4j2, #jackson, #gson, #docker, #jenkins
 
 ### Description
-This project has been created just to write some simple api automation. In the project in some places used different approches,   different methods to show usage that's why consistency between tests should not been expected. Some test cases can be changed, some verification can beed added to some test cases also many other test cases can be added to this project.
+This project has been created just to write some simple api automation. In the project in some places used different approches,   different methods to show usage that's why consistency between tests should not been expected. Some test cases can be changed, some verification can been added to some test cases also many other test cases can be added to this project.
 [Backend Project Swagger URL](https://micro19v2.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/)
 
 ### Project Structure:
